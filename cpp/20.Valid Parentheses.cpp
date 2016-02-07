@@ -1,3 +1,5 @@
+// Date: 2016-2-6
+
 #include <stack>
 
 class Solution {
@@ -21,7 +23,7 @@ public:
         return ps.empty();
     }
 private:
-    bool checkAndRemove(stack<char>& ps, char c) {
+    bool checkAndRemove(std::stack<char>& ps, char c) {
         if (ps.empty()) return false;
         if (c == ')' && ps.top() != '(') return false;
         if (c == '}' && ps.top() != '{') return false;
