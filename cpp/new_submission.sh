@@ -10,7 +10,7 @@ TITLE=$2
 PROBLEM="$NUMBER.$TITLE"
 FN="$PROBLEM.$EXT"
 
-echo "// Date: $(date -I)" >> "$FN"
+echo -e "// Date: $(date -I)\n\n" >> "$FN"
 vim "$FN"
 dos2unix "$FN"
 git add "$FN"
